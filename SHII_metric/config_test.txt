@@ -1,0 +1,31 @@
+# config file 
+
+# propagation model 
+# IC or LT
+propModel : LT
+
+# edge links
+probGraphFile : datasets/karatern_1_edge_dir.txt
+# community labels (each line represents for one community)
+labelFile : datasets/karatern_1_label.txt
+# structural holes 
+seedFile : datasets/karatern_1_topk.txt
+
+datasetFile : karatern_1
+
+# how many iterations to sample seed from each community
+randSeedIter : 100
+# the ratio of the number of seeds to the number of nodes in one community
+seedRatio : 0.1
+# the weight to be assigned to each edge
+edgeWeight : 0.1
+
+mcruns : 10000
+
+# the output directory
+# in the output file, each line represents for the censor scores of each community
+# the first value is the first type of censor score (outside/all)
+# the second value is the second type of censor score (outside/self)
+outdir : output
+
+
